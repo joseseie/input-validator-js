@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />	
+
+	<title>Jquery Validate</title>
+
+	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>	
+	<script type="text/javascript" src="input-validator-js.js"></script>	
+
+
+</head>
+<body>
+
+<div class="container">
+	<br/>
+	<br/>
+	<form class="form" id="form" name="form" method="post" action="" onsubmit="return false;" >
+		<div class="form-group">
+			<label>Username</label>
+			<input type="text" class="form-control required" name="username" id="username" value="" />		
+			<small></small>
+		</div>
+		<div class="form-group">
+			<label>Password</label>
+			<input type="password" class="form-control required" name="password" id="password" value="" />		
+			<small></small>
+		</div>
+		<button type="submit">Enviar</button>
+	</form>	
+
+</div>
+
+
+<script type="text/javascript">
+	InputValidatorJS.init({
+		FormId : "form",
+		ElementError: "small",
+		ClassRequired: "required", 
+		addElementErro: true,
+		addClassErroElement: false
+	});
+</script>
+
+</body>
+</html>
